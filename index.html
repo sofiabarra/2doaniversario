@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Sofía &amp; Erik — 2 Años</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Special+Elite&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<div class="grain-overlay"></div>
+<div class="floating-hearts" id="floatingHearts"></div>
+<div class="touch-trail" id="touchTrail"></div>
+
+<!-- ================= SOBRE DE BIENVENIDA ================= -->
+<div class="envelope-overlay" id="envelopeOverlay">
+  <div class="envelope-scene">
+    <p class="envelope-hint" id="envelopeHint">toca el sobre para abrirlo</p>
+    <div class="envelope" id="envelope" tabindex="0" role="button" aria-label="Abrir carta">
+      <div class="envelope-letter" >
+        <br>
+        <br>
+        <p ><br><span> Para: El amor de mi vida</span></p>
+      </div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-body"></div>
+      <div class="envelope-seal" id="envelopeSeal">S&amp;E</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="hero">
+  <div class="hero-stamp"><span>02 · 08 · 2024</span></div>
+  <p class="hero-eyebrow">Leha Sofía &amp; Erik</p>
+  <h1 class="hero-title">¡Qué increíble,<br>dos años,<br><span>no mi amor?</span></h1>
+
+  <div class="hero-counter" id="counter">
+    <div class="counter-item"><span id="c-years">0</span><small>años</small></div>
+    <div class="counter-item"><span id="c-days">0</span><small>días</small></div>
+    <div class="counter-item"><span id="c-hours">00</span><small>horas</small></div>
+    <div class="counter-item"><span id="c-mins">00</span><small>min</small></div>
+  </div>
+
+  <p class="hero-sub">Desde el 2 de agosto del 2024, hasta la fecha mi muñeca hermosa y los muchos años que Dios permitirá 💕</p>
+
+  <div class="scroll-hint">
+    <span>desliza</span>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</header>
+
+<!-- ================= TIMELINE / CORCHO DE RECUERDOS ================= -->
+<section class="timeline" id="timeline">
+  <p class="section-eyebrow">un vistazo al pasado</p>
+  <h2 class="section-title">Nuestra historia</h2>
+
+  <div class="polaroid-stage">
+    <div class="polaroid">
+      <div class="polaroid-photo">
+        <img id="slideImg" src="images/foto1.svg" alt="Nuestra historia">
+        <div class="flash" id="flash"></div>
+      </div>
+      <p class="polaroid-caption" id="slideCaption">02 Ago 2024 · El día que te pedí ser mi novia</p>
+    </div>
+    <div class="polaroid-dots" id="polaroidDots"></div>
+  </div>
+
+  <p class="corkboard-label">se va armando solo... 📌</p>
+  <div class="corkboard" id="corkboard"></div>
+</section>
+
+<!-- ================= PREGUNTA ================= -->
+<section class="question" id="question">
+  <div class="ticket">
+    <p class="question-eyebrow">una pregunta importante</p>
+    <h2 class="question-title">¿Lo celebramos,<br>mi amor?</h2>
+    <button class="btn-yes" id="btnYes">Sí, quiero celebrarlo 💕</button>
+  </div>
+</section>
+
+<!-- ================= OPCIONES (modal) ================= -->
+<div class="options-modal" id="optionsModal">
+  <div class="options-panel">
+    <button class="options-close" id="optionsClose" aria-label="Cerrar">✕</button>
+    <p class="section-eyebrow">elige nuestro plan</p>
+    <h2 class="section-title">¿Cómo lo celebramos?</h2>
+    <p class="options-hint">toca una postal para leerla ✨</p>
+
+    <div class="cards">
+      <div class="card-flip" data-choice="playa" tabindex="0" role="button" aria-label="Tarde en la playa">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="postcard-icon">🌊</span>
+            <p class="postcard-note">Una tarde con sal en la piel<br>y tu mano en la mía...</p>
+          </div>
+          <div class="card-face card-back">
+            <h3>🌊 Tarde en la playa</h3>
+            <p>Sol, arena y el atardecer más bonito, contigo. Nos vamos a Omoa, Cortés.</p>
+            <!-- EDITA este enlace por el destino exacto que quieras compartir -->
+            <a class="card-link" href="https://vt.tiktok.com/ZS4BTX9Dq/" target="_blank" rel="noopener">📍 Ver destino</a>
+            <button class="card-select">Elegir esta opción</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-flip" data-choice="cena" tabindex="0" role="button" aria-label="Tarde juntos y cena de aniversario">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="postcard-icon">🕯️</span>
+            <p class="postcard-note">Una tarde/noche tranquila,<br>solo nosotros dos...</p>
+          </div>
+          <div class="card-face card-back">
+            <h3>🕯️ Tarde juntos y cena de aniversario</h3>
+            <p>Una tarde tranquila, solo nosotros dos, cerrando con una cena para celebrar estos 2 años.</p>
+            <button class="card-select">Elegir esta opción</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirmation" id="confirmation">
+      <div class="stamp-approved">¡Elegido!</div>
+      <p id="confirmationText"></p>
+      <a class="whatsapp-btn" id="whatsappBtn" href="#" target="_blank" rel="noopener">💌 Enviar mi respuesta</a>
+      <button class="reset-btn" id="resetBtn">Cambiar mi elección</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p class="footer-quote">"De todas las personas del mundo, te elegiría a ti, una y otra vez, mi Miss Universe."</p>
+  <p class="footer-sign">Con todo mi amor,<span>Tu novio que te ama mucho</span></p>
+  <p class="footer-ps">P.D.: Feliz aniversario, mi muñeca hermosa. Gracias por estos increibles 2 años. 🤍</p>
+
+  <button class="secret-trigger" id="secretTrigger" aria-label="Carta secreta">✉️</button>
+  <p class="secret-hint">psst... hay algo escondido aquí</p>
+</footer>
+
+<!-- ================= CARTA SECRETA (modal) ================= -->
+<div class="secret-modal" id="secretModal">
+  <div class="secret-paper">
+    <button class="secret-close" id="secretClose" aria-label="Cerrar">✕</button>
+    <p class="secret-eyebrow">una carta solo para ti</p>
+    <!-- EDITA: personaliza esta carta con tus propias palabras y recuerdos -->
+    <div class="secret-text">
+      <p>Mi muñeca hermosa,</p>
+      <p>Si estás leyendo esto es porque encontraste el escondite... como siempre encuentras la manera de hacerme feliz.</p>
+      <p>Hace dos años te pedí ser mi novia sin imaginar todo lo que estos días nos traerían. Hoy solo quiero decirte gracias: por tu paciencia, por tu amor, por cada día, por el respeto.</p>
+      <p>Estoy muy agradecido con usted por estos dos inolvidables años que hemos vivido, sé que no todo el tiempo ha sido feliz, hemos pasado por malos momentos y lo importante es que hemos logrado supérarlo, gracias ti, a nuestro amor y a Dios que nos permite vivir cada momento juntos.</p>
+      <p>Hoy también te digo, que quiero que sean muchísimos más años, a tu lado, viviendo los mejores momentos, seguir aprendiendo juntos, como un equipo, porque Dios nos permitirá crecer y tener una familia. Solo me queda darte las gracias por estos maravillosos dos años, por cada risa, por cada momento, por cada beso y en especial por tu muy importante apoyo.</p>
+      <p>Eres mi persona favorita, mi Miss Universe, y no cambiaría estos dos años por nada del mundo. Aquí vamos por muchos más en el nombre de Dios.</p>
+      <p>Dios nos permita seguir creciendo y ser mejores para el otro, ¡Feliz aniversario amor de mi vida!</p>
+      <p class="secret-sign">Te amo 💗 <br>Erik</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= REPRODUCTOR DE MÚSICA ================= -->
+<!-- EDITA: coloca tu archivo de audio en audio/cancion.mp3 (o cambia la ruta abajo) -->
+<audio id="ourSong" src="audio/audio.mp3" loop preload="none"></audio>
+<button class="music-player" id="musicPlayer" aria-label="Reproducir nuestra canción">
+  <span class="vinyl" id="vinyl">🎵</span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
